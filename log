@@ -1,0 +1,2478 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /bigsoft/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab tb_autotest -cc gcc -initfile=/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini -L xpm -nolog -debug typical -generic_top mutant=0 
+Multi-threading is on. Using 4 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package work.pkg
+Compiling package work.txt_util
+Compiling architecture rtl of entity work.CPU_PC [cpu_pc_default]
+Compiling architecture rtl of entity work.CPU_CSR [\CPU_CSR(interrupt_vector="00000...]
+Compiling architecture rtl of entity work.CPU_CND [cpu_cnd_default]
+Compiling architecture rtl of entity work.CPU_PO [\CPU_PO(reset_vector="0000000000...]
+Compiling architecture rtl of entity work.CPU [\CPU(reset_vector="0000000000000...]
+Compiling architecture rtl of entity work.PROC_bus [\PROC_bus(n_slave=3,base=("00000...]
+Compiling architecture behavioral of entity work.RAM32 [\RAM32(memory_size=32768,file_na...]
+Compiling architecture rtl of entity work.IP_ITpush [ip_itpush_default]
+Compiling architecture rtl of entity work.IP_PLIC [ip_plic_default]
+Compiling architecture rtl of entity work.IP_CLINT [ip_clint_default]
+Compiling architecture behavior of entity work.tb_autotest
+Built simulation snapshot work.tb_autotest
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/work.tb_autotest/xsim_script.tcl
+# xsim {work.tb_autotest} -wdb {trace.wdb} -autoloadwcfg -tclbatch {/user/4/.base/bennassa/home/bennassa_lrhorfim/config/autotest.xsim.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source /user/4/.base/bennassa/home/bennassa_lrhorfim/config/autotest.xsim.tcl
+## if {[info exists ::env(TESTS)]} {
+## 	set string_test $env(TESTS)
+## } else {
+## 	set string_test 
+## }
+## set tests [regexp -all -inline -- {\S+} $string_test]
+## puts $string_test
+ addi  add  andi  and  auipc  beq  bge  bgeu  blt  bltu  bne  chenillard_minimaliste  chenillard_rotation  compteur  csrrci  csrrc  csrrsi  csrrs  csrrwi  csrrw  jalr  jal  lb  lbu  lh  lhu  lui  lw  mret  ori  or  rebouclage  sb  sh  slli  sll  slti  sltiu  slt  sltu  srai  sra  srli  srl  sub  sw  xori  xor
+## puts $tests
+addi add andi and auipc beq bge bgeu blt bltu bne chenillard_minimaliste chenillard_rotation compteur csrrci csrrc csrrsi csrrs csrrwi csrrw jalr jal lb lbu lh lhu lui lw mret ori or rebouclage sb sh slli sll slti sltiu slt sltu srai sra srli srl sub sw xori xor
+## foreach test $tests {
+## 	put "Preparing test: ${test}"
+## 	file delete test_default.out test_default.irq test_default.setup test_default.mem
+## 	file link -symbolic test_default.out   ${test}/test_default.out
+## 	file link -symbolic test_default.irq   ${test}/test_default.irq
+## 	file link -symbolic test_default.setup ${test}/test_default.setup
+## 	file link -symbolic test_default.mem   ../mem/${test}.mem
+## 
+## 	put "Running test: ${test}"
+## 	restart
+## 	run -all
+## 	file copy -force test_default.res  ${test}
+## 	file copy -force test_default.test ${test}
+## }
+Preparing test: addi
+Running test: addi
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 001F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFF8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 400F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 005F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFEF8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345001  get : 0x12345001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345400  get : 0x12345400
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345405  get : 0x12345405
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345403  get : 0x12345403
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: add
+Running test: add
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 123450B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01F08FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: andi
+Running test: andi
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 10000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 100FFF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 10000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 101FFF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 000FFF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 10000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 002FFF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x10000000  get : 0x10000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x10000000  get : 0x10000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x10000000  get : 0x10000000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: and
+Running test: and
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFF37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFFFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0000FF37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01EFFFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01FFFFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00005000  get : 0x00005000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00005000  get : 0x00005000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: auipc
+Running test: auipc
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00000F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0FFF0F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12346000  get : 0x12346000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001004  get : 0x00001004
+Time: 100 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0FFF1008  get : 0x0FFF1008
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 140 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: beq
+Running test: beq
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EF8663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00002FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00003F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EF8663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 290 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bge
+Running test: bge
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFD663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00005463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00002FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EFD663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00005463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00003FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00004F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EFD663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00005463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00003000  get : 0x00003000
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 420 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bgeu
+Running test: bgeu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFF663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00007463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00002FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00003F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 01EFF663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00007463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 220 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 320 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 390 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: blt
+Running test: blt
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00002F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00004463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00002FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EFC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00004463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00003FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EFC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00004463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00003000  get : 0x00003000
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 320 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 490 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 520 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bltu
+Running test: bltu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00003FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00002F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFE863
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01EFE663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00006463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00003FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 01EFE663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00006463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00003000  get : 0x00003000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00003000  get : 0x00003000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004000  get : 0x00004000
+Time: 400 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 470 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 500 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bne
+Running test: bne
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EF9663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00001463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00002FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EF9663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00001463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00003FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00004F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EF9663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00004FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00001463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00003000  get : 0x00003000
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 360 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: chenillard_minimaliste
+Running test: chenillard_minimaliste
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 01506093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00106113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00111133
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 000001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00118193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0021F233
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00125233
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000337
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 006242B3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00406333
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 000013B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 005393B3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 0013E393
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00706FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001001  get : 0x00001001
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 450 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: chenillard_rotation
+Running test: chenillard_rotation
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00306093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 06400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFF10113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FE011EE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0000EF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00109093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0100F113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FE0104E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00F0F093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 0010E093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FC000EE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 7120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 7120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 7120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 7120 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: compteur
+Running test: compteur
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00106093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 001F8FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345001  get : 0x12345001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrci
+Running test: csrrci
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrc
+Running test: csrrc
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrsi
+Running test: csrrsi
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrs
+Running test: csrrs
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrwi
+Running test: csrrwi
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrw
+Running test: csrrw
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0000FFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 04008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 30509073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 3000A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0C002137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00112023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3040A073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00010063
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 5AD00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF9FF06F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0C2001B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00418193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0001A083
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000F000  get : 0x0000F000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 60 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jalr
+Running test: jalr
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001537
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 02050093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00A00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00008FE7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00D00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FF808FE7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01200F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00808FE7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 01600F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 01B00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 01C00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00000013
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001010  get : 0x00001010
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000012  get : 0x00000012
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001028  get : 0x00001028
+Time: 220 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000016  get : 0x00000016
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000001B  get : 0x0000001B
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000001C  get : 0x0000001C
+Time: 320 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 320 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 320 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 320 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jal
+Running test: jal
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00800FEF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00800FEF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00800FEF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00001004  get : 0x00001004
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000100C  get : 0x0000100C
+Time: 100 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001014  get : 0x00001014
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 180 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lb
+Running test: lb
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00208F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00508F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00708F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 02010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00808F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00B08F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00000F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000034  get : 0x00000034
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000067  get : 0x00000067
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000020  get : 0x00000020
+Time: 790 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFAB  get : 0xFFFFFFAB
+Time: 840 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 890 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lbu
+Running test: lbu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0000CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 0050CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 0070CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 02010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0080CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00B0CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00004F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000034  get : 0x00000034
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000067  get : 0x00000067
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000020  get : 0x00000020
+Time: 790 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000AB  get : 0x000000AB
+Time: 840 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 890 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lh
+Running test: lh
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00410113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00009F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00209F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 67F9F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 30110113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00609F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00409F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 02010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00809F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00A09F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00001F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00005004  get : 0x00005004
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001234  get : 0x00001234
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000067F9  get : 0x000067F9
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF301  get : 0xFFFFF301
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFE020  get : 0xFFFFE020
+Time: 790 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFABCD  get : 0xFFFFABCD
+Time: 840 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 890 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lhu
+Running test: lhu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00410113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0000DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 67F9F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 30110113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 0060DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 0040DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 02010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 0080DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00A0DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00005F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00005004  get : 0x00005004
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001234  get : 0x00001234
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000067F9  get : 0x000067F9
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000F301  get : 0x0000F301
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000E020  get : 0x0000E020
+Time: 790 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000ABCD  get : 0x0000ABCD
+Time: 840 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 890 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 890 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lui
+Running test: lui
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lw
+Running test: lw
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0000AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0040AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0080AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00002F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x67890000  get : 0x67890000
+Time: 470 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xABCDE000  get : 0xABCDE000
+Time: 690 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 740 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: mret
+Running test: mret
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000FFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00000097
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01408093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 34109073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 30200073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0AA06F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0001CFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00100073
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x000FF000  get : 0x000FF000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0001C000  get : 0x0001C000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: ori
+Running test: ori
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0FFFEF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 100FEF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 7FFFEF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x123450FF  get : 0x123450FF
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345100  get : 0x12345100
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x123457FF  get : 0x123457FF
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: or
+Running test: or
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFF00F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFEFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01021F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01EFEFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EFEFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFF45000  get : 0xFFF45000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x13365000  get : 0x13365000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x13365000  get : 0x13365000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: rebouclage
+Running test: rebouclage
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 140 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sb
+Running test: sb
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00208F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 012351B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 10218193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 003080A3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00108F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 0040AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00508F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00708F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = F51F01B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 10218193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00308323
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00608F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 00508F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 00000F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000034  get : 0x00000034
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 460 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x67890010  get : 0x67890010
+Time: 680 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 730 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000067  get : 0x00000067
+Time: 780 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 940 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 990 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 1040 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 1040 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 1040 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 1040 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sh
+Running test: sh
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00208F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 012351B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 10218193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00309123
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0000AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 0040AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00508F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00708F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = F51FF1B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 10218193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00309223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00408F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 00708F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 00508F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = 00000F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1050] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000034  get : 0x00000034
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x51025000  get : 0x51025000
+Time: 460 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x67890010  get : 0x67890010
+Time: 680 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 730 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000067  get : 0x00000067
+Time: 780 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 940 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000067  get : 0x00000067
+Time: 990 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFF1  get : 0xFFFFFFF1
+Time: 1040 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 1090 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 1090 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 1090 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 1090 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slli
+Running test: slli
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 004F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00CF9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF00FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 007F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x23450000  get : 0x23450000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x34500000  get : 0x34500000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFF00000  get : 0xFFF00000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xF8000000  get : 0xF8000000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sll
+Running test: sll
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00000F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00C00F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x23450000  get : 0x23450000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x34500000  get : 0x34500000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slti
+Running test: slti
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00100237
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00522F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001012B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0002AF13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltiu
+Running test: sltiu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00100237
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00522F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001012B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0002AF13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slt
+Running test: slt
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020AFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00100237
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001012B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00522FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltu
+Running test: sltu
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020AFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00100237
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001012B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00522FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srai
+Running test: srai
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 400FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 404FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 404FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 40CFDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF00FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 407FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x01234500  get : 0x01234500
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00123450  get : 0x00123450
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000123  get : 0x00000123
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFF00000  get : 0xFFF00000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFE000  get : 0xFFFFE000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sra
+Running test: sra
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00000F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00C00F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = F0000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x01234500  get : 0x01234500
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00123450  get : 0x00123450
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000123  get : 0x00000123
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xF0000000  get : 0xF0000000
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFC000000  get : 0xFC000000
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 360 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srli
+Running test: srli
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 004FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00CFDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF00FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 007FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x01234500  get : 0x01234500
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00123450  get : 0x00123450
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000123  get : 0x00000123
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFF00000  get : 0xFFF00000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x01FFE000  get : 0x01FFE000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srl
+Running test: srl
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00000F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00C00F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EF9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = F0000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 01EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x23450000  get : 0x23450000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x34500000  get : 0x34500000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xF0000000  get : 0xF0000000
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x3C000000  get : 0x3C000000
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 360 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sub
+Running test: sub
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 41EF8FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 41FF8FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFF37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 41FF0FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12344000  get : 0x12344000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sw
+Running test: sw
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0000AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 67890137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0040AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 40008093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = ABCDE137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 0080AF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00002F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x67890000  get : 0x67890000
+Time: 470 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xABCDE000  get : 0xABCDE000
+Time: 690 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 740 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 740 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xori
+Running test: xori
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0FFFCF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 100FCF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 7FFFCF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x123450FF  get : 0x123450FF
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345100  get : 0x12345100
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x123457FF  get : 0x123457FF
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xor
+Running test: xor
+INFO: [Simtcl 6-17] Simulation restarted
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFF00F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFCFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 01021F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01EFCFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EFCFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/RAM32_reload.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xEDC45000  get : 0xEDC45000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x13364000  get : 0x13364000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x13364000  get : 0x13364000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/4/.base/bennassa/home/bennassa_lrhorfim/vhd/bench/tb_autotest.vhd" Line 206
+## exit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 15 14:38:33 2025...
