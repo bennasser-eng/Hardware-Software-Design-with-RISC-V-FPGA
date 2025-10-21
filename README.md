@@ -1,9 +1,9 @@
 
-⚙️ Project: Hardware/Software Co-Design with RISC-V & FPGA
+##⚙️ Project: Hardware/Software Co-Design with RISC-V & FPGA
 
 This project explores processor design, simulation, and testing using a RISC-V–like architecture. It combines hardware description, software tooling, and automation scripts to run experiments on FPGA platforms.
 
-The work includes:
+The work includes:  
 	•	Building and simulating a simple processor architecture
 	•	Running automated test suites and generating results
 	•	Using Vivado scripts (.tcl) for FPGA synthesis and programming
