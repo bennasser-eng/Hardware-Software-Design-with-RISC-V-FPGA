@@ -1,5 +1,5 @@
 
-## ⚙️ Project: Hardware/Software Co-Design with RISC-V & FPGA
+## Project: Hardware/Software Co-Design with RISC-V & FPGA
 
 This project explores processor design, simulation, and testing using a RISC-V–like architecture. It combines hardware description, software tooling, and automation scripts to run experiments on FPGA platforms.
 
@@ -32,13 +32,13 @@ make program
 
 ⸻
 
-🧪 Tests
+  Tests
 	•	autotest.res contains results from automated test execution
 	•	gen_tests_mutants.sh allows generating mutant test variations
 
 ⸻
 
-📖 Learning Outcomes
+ Learning Outcomes
 
 This project provides hands-on experience with:
 	•	Processor design and low-level software/hardware interaction
@@ -131,5 +131,5 @@ Fichier de [log](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eva
 [![invaders status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)
 
 
-Auteurs:
+# Auteurs:
 Ahmed Bennasser & Akram Lrhorfi 
