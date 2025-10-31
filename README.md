@@ -6,7 +6,7 @@ This project explores processor design, simulation, and testing using a RISC-V�
 The work includes:  
 	•	Building and simulating a simple processor architecture
 	•	Running automated test suites and generating results
-	•	Using Vivado scripts (.tcl) for FPGA synthesis and programming
+	•	Using Vivado scripts (.tcl) for FPGA synthesis and programming 
 	•	Automating compilation, simulation, and deployment via Makefiles and shell scripts
 
 
