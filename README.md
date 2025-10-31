@@ -131,4 +131,5 @@ Fichier de [log](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eva
 [![invaders status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)
 
 
-
+Auteurs:
+Ahmed Bennasser & Akram Lrhorfi 
